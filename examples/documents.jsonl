@@ -1,0 +1,24 @@
+{"text": "INVOICE #1001\nBill To: Acme Corp\nAmount Due: $412.00\nremit payment to accounts payable within 30 days", "label": "invoice"}
+{"text": "INVOICE #1002\nBill To: Globex Inc\nAmount Due: $88.50\nremit payment to accounts payable department", "label": "invoice"}
+{"text": "INVOICE #1003\nBill To: Initech\nAmount Due: $1204.00\nplease remit to accounts payable by due date", "label": "invoice"}
+{"text": "INVOICE #1004\nBill To: Umbrella Corp\nAmount Due: $650.75\nremit to accounts payable promptly", "label": "invoice"}
+{"text": "INVOICE #1005\nBill To: Hooli\nAmount Due: $99.99\nremit payment to accounts payable", "label": "invoice"}
+{"text": "INVOICE #1006\nBill To: Stark Industries\nAmount Due: $3400.00\nremit to accounts payable at once", "label": "invoice"}
+{"text": "RECEIPT\nThank you for your purchase\nTotal Paid: $24.50\ncashier 12 change given $0.50", "label": "receipt"}
+{"text": "RECEIPT\nThank you for shopping with us\nTotal Paid: $8.99\ncashier 3 change given $1.01", "label": "receipt"}
+{"text": "RECEIPT\nThanks for your purchase today\nTotal Paid: $55.20\ncashier 7 no change due", "label": "receipt"}
+{"text": "RECEIPT\nThank you come again\nTotal Paid: $12.00\ncashier 1 change given $3.00", "label": "receipt"}
+{"text": "RECEIPT\nThank you for your business\nTotal Paid: $200.00\ncashier 9 change given $0.00", "label": "receipt"}
+{"text": "RECEIPT\nWe appreciate your purchase\nTotal Paid: $6.75\ncashier 5 change given $0.25", "label": "receipt"}
+{"text": "CONTRACT AGREEMENT\nThis agreement dated this day\nwitnesseth whereas the parties agree to the following terms and conditions", "label": "contract"}
+{"text": "CONTRACT AGREEMENT\nThis service agreement dated herein\nwitnesseth whereas both parties hereby agree to the terms below", "label": "contract"}
+{"text": "CONTRACT AGREEMENT\nThis employment agreement dated\nwitnesseth whereas the employer and employee agree as follows", "label": "contract"}
+{"text": "CONTRACT AGREEMENT\nThis lease agreement dated below\nwitnesseth whereas landlord and tenant agree to these terms", "label": "contract"}
+{"text": "CONTRACT AGREEMENT\nThis licensing agreement dated above\nwitnesseth whereas licensor and licensee agree hereto", "label": "contract"}
+{"text": "CONTRACT AGREEMENT\nThis partnership agreement dated now\nwitnesseth whereas the partners agree to the following", "label": "contract"}
+{"text": "PURCHASE ORDER #PO-2201\nVendor: Acme Supplies\nShip To: Warehouse 3\nQty  Item          Unit Price\n10   Widget A      4.50\n5    Widget B      9.00\nplease confirm receipt of this order", "label": "purchase_order"}
+{"text": "PURCHASE ORDER #PO-2202\nVendor: Globex Parts\nShip To: Warehouse 1\nQty  Item          Unit Price\n20   Bolt M6       0.25\n8    Bracket       2.10\nconfirm and ship by requested date", "label": "purchase_order"}
+{"text": "PURCHASE ORDER #PO-2203\nVendor: Initech Supply\nShip To: Warehouse 2\nQty  Item          Unit Price\n15   Cable Tie     0.05\n3    Enclosure     14.00\nplease acknowledge this purchase order", "label": "purchase_order"}
+{"text": "PURCHASE ORDER #PO-2204\nVendor: Umbrella Materials\nShip To: Warehouse 4\nQty  Item          Unit Price\n50   Fastener      0.10\n12   Panel         6.75\nconfirm delivery schedule", "label": "purchase_order"}
+{"text": "PURCHASE ORDER #PO-2205\nVendor: Stark Components\nShip To: Warehouse 5\nQty  Item          Unit Price\n7    Sensor        22.00\n2    Controller    88.00\nplease confirm this order", "label": "purchase_order"}
+{"text": "PURCHASE ORDER #PO-2206\nVendor: Hooli Supply\nShip To: Warehouse 6\nQty  Item          Unit Price\n30   Screw         0.03\n6    Hinge         3.25\nconfirm and ship promptly", "label": "purchase_order"}
