@@ -147,3 +147,11 @@ class TestModuleEntryPoint:
         )
         assert done.returncode == 0
         assert model_path.exists()
+
+
+def test_train_reports_holdout_size_and_warns_when_small(tmp_path: Path, capsys) -> None:  # type: ignore[no-untyped-def]
+    data = write_jsonl(tmp_path / "d.jsonl", corpus())
+    assert cli.main(["train", data, "--out", str(tmp_path / "m.json")]) == 0
+    captured = capsys.readouterr()
+    assert "held-out example(s)" in captured.out
+    assert "not reliable" in captured.err

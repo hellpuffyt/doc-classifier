@@ -75,6 +75,11 @@ def main(argv: list[str] | None = None) -> int:
         return EXIT_USAGE
 
 
+#: Below this many held-out documents a fitted temperature mostly reflects
+#: which few examples landed in the holdout, not the model's calibration.
+MIN_RELIABLE_HOLDOUT = 30
+
+
 def _train(args: argparse.Namespace) -> int:
     documents = io.load(args.data)
     model = train.fit_and_calibrate(documents, args.holdout_fraction)
@@ -83,7 +88,18 @@ def _train(args: argparse.Namespace) -> int:
         f"trained on {sum(1 for d in documents if d.label)} example(s), "
         f"{len(model.classes)} class(es): {', '.join(model.classes)}"
     )
-    print(f"calibration temperature: {model.temperature:.3f}")
+    labelled = [d for d in documents if d.label]
+    _, holdout = train.split_holdout(labelled, args.holdout_fraction)
+    print(
+        f"calibration temperature: {model.temperature:.3f} "
+        f"(fitted on {len(holdout)} held-out example(s))"
+    )
+    if len(holdout) < MIN_RELIABLE_HOLDOUT:
+        print(
+            f"warning: fewer than {MIN_RELIABLE_HOLDOUT} held-out examples; the "
+            "temperature (and so the confidence scores) is not reliable",
+            file=sys.stderr,
+        )
     print(f"model written to {args.out}")
     return EXIT_OK
 

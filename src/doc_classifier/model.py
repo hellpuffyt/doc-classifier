@@ -32,10 +32,15 @@ TOKEN_SMOOTHING = 1.0
 #: but avg_line_length is an unbounded token count, where the same floor
 #: would make a one-token difference look like a 15-standard-deviation
 #: outlier and let layout swamp the token evidence entirely.
+#:
+#: The two *line* ratios are quantised by the line count: in a typical
+#: four-line document one line moves them by 0.25. A floor of 0.05 claimed
+#: twenty times more precision than that, so one double-spaced line (read as
+#: a table row) cost an invoice ~200 nats and outweighed all of its words.
 LAYOUT_STD_FLOOR: dict[str, float] = {
     "digit_ratio": 0.05,
-    "table_line_ratio": 0.05,
-    "header_line_ratio": 0.05,
+    "table_line_ratio": 0.25,
+    "header_line_ratio": 0.25,
     "avg_line_length": 1.0,
 }
 
