@@ -1,0 +1,16 @@
+{"text": "INVOICE #4471  Bill to: Acme Corp  Amount Due: $1,204.00", "label": "invoice"}
+{"text": "Invoice 2290\nBill To: Wayne Enterprises\nAmount Due: $75.00\nPlease remit to accounts payable", "label": "invoice"}
+{"text": "INVOICE  #88  Bill To  Soylent  Amount Due  $410.10  remit within 15 days", "label": "invoice"}
+{"text": "invoice number 5512 bill to vandelay industries amount due 99.00 remit payment", "label": "invoice"}
+{"text": "RECEIPT  Thank you for your purchase  Total Paid: $14.20  cashier 4", "label": "receipt"}
+{"text": "Receipt\nThanks for shopping\nTotal Paid: $3.10\ncashier 2 change given $0.90", "label": "receipt"}
+{"text": "RECEIPT\nTotal Paid  $41.00\nThank you, come again", "label": "receipt"}
+{"text": "thank you for your purchase total paid 9.99 change given 0.01 cashier 8", "label": "receipt"}
+{"text": "PURCHASE ORDER #PO-3001  Vendor: Acme Supplies  Ship To: Warehouse 9  Qty 10 widgets", "label": "purchase_order"}
+{"text": "Purchase Order PO-3002\nVendor: Initech Supply\nShip To: Warehouse 4\nQty  5   bolts", "label": "purchase_order"}
+{"text": "PURCHASE ORDER\nVendor  Globex Parts\nShip To  Dock 2\nQty 100 units unit price 2.00", "label": "purchase_order"}
+{"text": "purchase order po-3004 vendor hooli supply ship to warehouse 1 qty 3 servers", "label": "purchase_order"}
+{"text": "CONTRACT AGREEMENT  This agreement dated this day  witnesseth whereas the parties agree", "label": "contract"}
+{"text": "Contract Agreement\nThis consulting agreement is dated today\nwitnesseth whereas the parties hereto", "label": "contract"}
+{"text": "CONTRACT\nThis agreement between the parties\nwhereas the parties wish to agree\nwitnesseth", "label": "contract"}
+{"text": "this service agreement dated herein witnesseth whereas both parties agree to the terms", "label": "contract"}

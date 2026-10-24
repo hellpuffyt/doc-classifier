@@ -1,5 +1,20 @@
 # Changelog
 
+## Unreleased
+
+- Fixed: the standard-deviation floor on the two line-ratio layout features
+  (0.05) was far below their resolution (one line of a four-line document is
+  0.25), so a single double-spaced line outweighed every word. The README's own
+  invoice example was classified `purchase_order` at 100%; 10/16 held-out
+  variants were correct. Floors are now 0.25: 15/16, ECE 0.375 -> 0.062.
+  Models trained with the old floors keep their stored statistics; retrain.
+- Added: `train` reports how many held-out documents the temperature was fitted
+  on and warns below 30.
+- Docs: README example replaced with real output and an honest note on
+  calibration with tiny datasets; install from source. Added held-out variants
+  fixture and tests, `SECURITY.md`, `.editorconfig`,
+  `docs/PRODUCTION_READINESS.md`.
+
 ## 0.1.0 — 2026-09-01
 
 Initial release.

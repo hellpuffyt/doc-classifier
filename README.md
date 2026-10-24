@@ -8,17 +8,29 @@ Python 3.10+ and nothing else.
 
 ```console
 $ doc-classifier train examples/documents.jsonl --out model.json
-trained on 40 example(s), 4 class(es): contract, invoice, purchase_order, receipt
-calibration temperature: 2.14
+warning: fewer than 30 held-out examples; the temperature (and so the confidence scores) is not reliable
+trained on 24 example(s), 4 class(es): contract, invoice, purchase_order, receipt
+calibration temperature: 0.460 (fitted on 4 held-out example(s))
 model written to model.json
-
 $ doc-classifier classify --model model.json "INVOICE #4471  Bill to: Acme Corp  Amount Due: $1,204.00"
-invoice  (confidence 87.3%)
-   87.3%  invoice
-    8.1%  purchase_order
-    3.2%  receipt
-    1.4%  contract
+invoice  (confidence 100.0%)
+  100.0%  invoice
+    0.0%  purchase_order
+    0.0%  contract
+    0.0%  receipt
+$ doc-classifier eval --model model.json tests/fixtures/heldout_variants.jsonl
+15/16 correct (93.8% accuracy, ECE 0.062)
+
+confused as:
+     1  purchase_order -> contract
 ```
+
+Real output. The bundled example set is tiny (24 documents), so the
+calibration step sees only 4 held-out documents and *sharpens* the scores
+(temperature < 1) rather than softening them — the tool says so. Calibrated
+confidence needs a realistic training set (the warning disappears at 30+
+held-out documents); the numbers above demonstrate the mechanics, not a
+calibration result.
 
 ## Why calibration is the point, not a footnote
 
@@ -41,6 +53,17 @@ rather than asserted.
   line ratio, average line length, and whether a currency amount appears —
   each modelled as its own Gaussian or Bernoulli per class, not folded into
   the word vocabulary.
+
+## Install
+
+Not published on PyPI (the name `doc-classifier` there is an unrelated
+project). Install from a clone:
+
+```console
+git clone https://github.com/hellpuffyt/doc-classifier && cd doc-classifier
+python -m venv .venv && . .venv/bin/activate
+pip install .
+```
 
 ## Usage
 
@@ -78,5 +101,8 @@ pytest
 ruff check .
 mypy
 ```
+
+Security: [SECURITY.md](SECURITY.md). Audit evidence:
+[docs/PRODUCTION_READINESS.md](docs/PRODUCTION_READINESS.md).
 
 MIT licensed.
